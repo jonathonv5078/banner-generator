@@ -1,34 +1,90 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>title</title>
-    <script src="//code.jquery.com/jquery-1.12.0.min.js">
-    </script>
-    <script> 
-    
-    $(function(){
-        
+
+<head>
+  <meta charset="UTF-8">
+  <title>title</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js">
+  </script>
+  <script>
+    $(function() {
+      $("#button").click(function() {
+        var name = $("#bannerName").val();
+        var dob = $("#dateofBirth").val();
+        var color = $("#color").val();
+        var font = $('input[name="firstname"]:checked').val(); 
+        $("#bannerName1").html(name);
+        $("#dateofBirth1").html(dob);
+        $("input[type='checkbox']").val();
+        $("input[type='radio']").val();
+        $("#bannerName1").css("color", color);
+        $("#dateofBirth1").css("color", color);
+        $("#banner").css("font-family", font);
+      });
     });
-    
-    </script>
-    
-  </head>
-  <body>
-<form action="action_page.php">
+  </script>
+
+  <style>
+    #banner {
+      border-style: solid;
+      border: 5px solid;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="banner">
+
+    <h1 id="bannerName1"></h1>
+    <h2 id="dateofBirth1"></h2>
+
+  </div>
+
+
+
+
   <fieldset>
     <legend>Make your banner!</legend>
-    Type of font:<br>
-    <input type="radio" name="firstname" value="Mickey"> Arial Italic <br>
-    <input type="radio" name="firstname" value="Mickey"> Comicsans <br>
-    <input type="radio" name="firstname" value="Mickey"> Helvetica <br>
-    <input type="radio" name="firstname" value="Mickey"> Times New Roman <br>
-    
-    Color:<br>
-    <input type="text" name="lastname" value="Mouse">
-    <br>Picture:<br>
-     <input type="text" name="lastname" value="Mouse">
+    <br> Name:
+    <input type="text" name="name" id="bannerName">
+    <br>
+    <br> Date Of Birth:
+    <input type="text" name="dob" id="dateofBirth">
+    <br>
+    <br> Type of font:
+    <br>
+    <input type="radio" name="firstname" value="Arial" id="Arial"> Arial Italic
+    <br>
+    <input type="radio" name="firstname" value="Comic Sans MS" id="comic"> Comicsans
+    <br>
+    <input type="radio" name="firstname" value="Trebuchet MS" id="helvetica"> Helvetica
+    <br>
+    <input type="radio" name="firstname" value="Times New Roman" id="tmn"> Times New Roman
+    <br>
+    <br> Color:
+    <br>
+    <select id="color">
+      <option value="Black"> Black </option>
+      <option value="Red"> Red </option>
+      <option value="Blue"> Blue </option>
+      <option value="White"> White</option>
+    </select>
+    <br>
+    <br> Background:
+    <br>
+    <select id="background">
+      <option value="Blue">Blue</option>
+      <option value="Black">Black</option>
+      <option value="White">White</option>
+      <option value="Yellow">Yellow</option>
+      <option value="Pink">Pink</option>
+      <option value="Purple">Purple</option>
+    </select>
+    <br>
+    <br>
+    <input type="button" value="Submit Banner!" id="button">
   </fieldset>
-</form>
-  </body>
+</body>
+
 </html>
