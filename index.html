@@ -8,7 +8,7 @@
   </script>
   <script>
     $(function() {
-      $("#button").click(function() {
+      $("#button").click(function() { // The actual html being insterted down here
         var name = $("#bannerName").val();
         var dob = $("#dateofBirth").val();
         var color = $("#color").val();
@@ -25,7 +25,7 @@
   </script>
 
   <style>
-    #banner {
+    #banner { // The style of the banner
       border-style: solid;
       border: 5px solid;
     }
@@ -34,7 +34,7 @@
 
 <body>
 
-  <div id="banner">
+  <div id="banner"> // The HTML going inside the banner
 
     <h1 id="bannerName1"></h1>
     <h2 id="dateofBirth1"></h2>
@@ -44,7 +44,7 @@
 
 
 
-  <fieldset>
+  <fieldset> // The fieldset
     <legend>Make your banner!</legend>
     <br> Name:
     <input type="text" name="name" id="bannerName">
